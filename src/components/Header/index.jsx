@@ -1,15 +1,11 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { StyledLink } from '../../utils/style/Atoms'
 import Logo from '../../logo.svg'
 
 const HomeLogo = styled.img`
   height: 68px;
   width: 210.32px;
-  position: absolute;
-  left: 0%;
-  right: 83.04%;
-  top: 0%;
-  bottom: 0%;
 `
 
 const NavContainer = styled.nav`
@@ -26,8 +22,8 @@ function Header() {
         <HomeLogo src={Logo} />
       </Link>
       <div>
-        <Link to="/">Accueil</Link>
-        <Link to="/about">À propos</Link>
+        <StyledLink to="/">Accueil</StyledLink>
+        <StyledLink to="/about">À propos</StyledLink>
       </div>
     </NavContainer>
   )

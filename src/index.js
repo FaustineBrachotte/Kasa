@@ -7,9 +7,11 @@ import About from './pages/About'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Error from './components/Error'
+import GlobalStyle from './utils/style/GlobalStyle'
 
 ReactDOM.render(
   <React.StrictMode>
+    <GlobalStyle />
     <Router>
       <Header />
       <Routes>
