@@ -1,15 +1,17 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Housing from './pages/Housing'
+import Error from './pages/Error'
 import About from './pages/About'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Error from './components/Error'
 import GlobalStyle from './utils/style/GlobalStyle'
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('root'));
+
+root.render(
   <React.StrictMode>
     <GlobalStyle />
     <Router>
@@ -17,11 +19,10 @@ ReactDOM.render(
       <Routes>
         <Route path="*" element={<Error />} />
         <Route path="/" element={<Home />} />
+        <Route path="/housing/:id" element={<Housing />} />
         <Route path="/housing" element={<Housing />} />
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
-)
+  </React.StrictMode>)

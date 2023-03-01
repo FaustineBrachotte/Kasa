@@ -1,12 +1,11 @@
-//import logo from '../../logo.svg'
-//import '../../Housing.css'
+import { useParams } from 'react-router-dom'
+import HousingList from '../../data/data.json'
 
 function Housing() {
-  return (
-    <div>
-      <h1> Page logement 🏠</h1>
-    </div>
-  )
+  const productId = useParams()
+  const Housing = HousingList.find((housing) => housing.id === productId.id)
+
+  return <h1>{Housing.title}</h1>
 }
 
 export default Housing
