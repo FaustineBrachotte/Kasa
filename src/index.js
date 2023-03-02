@@ -1,7 +1,7 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
+import Home from './pages/Home/home'
 import Housing from './pages/Housing'
 import Error from './pages/Error'
 import About from './pages/About'
