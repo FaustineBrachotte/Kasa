@@ -5,15 +5,14 @@ import Home from './pages/Home/home'
 import Housing from './pages/Housing'
 import Error from './pages/Error'
 import About from './pages/About'
-import Header from './components/Header'
+import Header from './components/Header/header'
 import Footer from './components/Footer'
-import GlobalStyle from './utils/style/GlobalStyle'
+import './style/main.scss'
 
 const root = createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <GlobalStyle />
     <Router>
       <Header />
       <Routes>

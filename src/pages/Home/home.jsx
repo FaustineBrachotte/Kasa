@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom'
 import Card from '../../components/Card/card'
+import Banner from '../../components/Banner/banner'
 import HousingList from '../../data/data.json'
+import HomeBanner from '../../assets/home_banner.png'
+
 import './home.css'
 
 function Home() {
   return (
     <>
-      <h1>Chez vous, partout et ailleurs</h1>
+      <Banner src={HomeBanner} />
       <section className="cards-section">
         {HousingList.map((housing) => (
           <article key={housing.id}>
