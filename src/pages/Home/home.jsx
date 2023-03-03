@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import Card from '../../components/Card/card'
 import Banner from '../../components/Banner/banner'
-import HousingList from '../../data/data.json'
+import HousingList from '../../data/housing.json'
 import HomeBanner from '../../assets/home_banner.png'
 
 import './home.css'

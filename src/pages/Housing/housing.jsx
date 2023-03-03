@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import HousingList from '../../data/data.json'
+import HousingList from '../../data/housing.json'
 import Slideshow from '../../components/Slideshow/slideshow'
 
 function Housing() {
