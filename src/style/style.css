@@ -74,4 +74,21 @@
   color: #FFFFFF;
 }
 
+.slideshow {
+  width: 1240px;
+  height: 415px;
+}
+.slideshow img {
+  border-radius: 25px;
+  object-fit: contain;
+}
+
+.arrow {
+  position: absolute;
+  z-index: 1;
+}
+.arrow img {
+  height: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,25 @@
+.slideshow {
+margin: 0 100px 30px 100px;
+position: relative;
+}
+
+.picture {
+    height: 415px;
+    width: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+}
+.arrow {
+    position: absolute;
+    top: 156.7px;
+    height: 79.2px;
+}
+
+.left {
+    margin-left: 23.36px;
+}
+
+.right {
+    right:0;
+    margin-right: 23.36px;
+}

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import ArrowLeft from '../../assets/arrow_left.svg'
 import ArrowRight from '../../assets/arrow_right.svg'
-import './slideshow.scss'
+import './slideshow.module.scss'
 
 function Slideshow({ pictures }) {
   const [pictureNumber, updatePicture] = useState(0)
@@ -22,9 +22,19 @@ function Slideshow({ pictures }) {
     <>
       <p>{numberOfPic}</p>
       <div className="slideshow">
-        <img src={ArrowLeft} alt="Précédent" onClick={prevPicture} />
-        <img src={pictures[pictureNumber]} alt="Logement" />
-        <img src={ArrowRight} alt="Suivant" onClick={nextPicture} />
+        <img
+          src={ArrowLeft}
+          className="arrow left"
+          alt="Précédent"
+          onClick={prevPicture}
+        />
+        <img className="picture" src={pictures[pictureNumber]} alt="Logement" />
+        <img
+          src={ArrowRight}
+          className="arrow right"
+          alt="Suivant"
+          onClick={nextPicture}
+        />
       </div>
     </>
   )
