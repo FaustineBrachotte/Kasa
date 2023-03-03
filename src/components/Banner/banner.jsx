@@ -4,6 +4,7 @@ function Card({ src }) {
   return (
     <div className="banner">
       <img src={src} alt="" />
+      <div className="background"></div>
     </div>
   )
 }
