@@ -20,7 +20,6 @@ function Slideshow({ pictures }) {
 
   return (
     <>
-      <p>{numberOfPic}</p>
       <div className="slideshow">
         <img
           src={ArrowLeft}

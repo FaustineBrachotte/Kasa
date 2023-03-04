@@ -1,6 +1,6 @@
 .slideshow {
-margin: 0 100px 30px 100px;
 position: relative;
+margin-bottom: 30px;
 }
 
 .picture {
@@ -11,8 +11,9 @@ position: relative;
 }
 .arrow {
     position: absolute;
-    top: 156.7px;
+    top: -156.7px;
     height: 79.2px;
+    background: red;
 }
 
 .left {
