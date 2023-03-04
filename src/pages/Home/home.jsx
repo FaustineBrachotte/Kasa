@@ -3,11 +3,11 @@ import Card from '../../components/Card/card'
 import Banner from '../../components/Banner/banner'
 import HousingList from '../../data/housing.json'
 import HomeBanner from '../../assets/home_banner.png'
-import './home.css'
+import './home.module.scss'
 
 function Home() {
   return (
-    <>
+    <div className="homepage">
       <Banner src={HomeBanner} />
       <section className="cards-section">
         {HousingList.map((housing) => (
@@ -18,7 +18,7 @@ function Home() {
           </article>
         ))}
       </section>
-    </>
+    </div>
   )
 }
 
