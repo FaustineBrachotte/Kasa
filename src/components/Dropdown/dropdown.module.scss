@@ -1,0 +1,31 @@
+@import '../../style/variables.module.scss';
+
+.dropdown {
+    position: relative;
+    list-style-type: none;
+    margin-left: 0;
+    cursor: pointer;
+    margin-top: 31px;
+}
+
+.title {
+    color: white;
+    background: $primary;
+    border-radius: 5px;
+    font-size: 24px;
+    padding: 5px 18px 5px 18px;
+}
+
+.description {
+    background: #F7F7F7;
+    padding: 30px 18px 19px 27px;
+    font-size: 24px;
+    color: $primary;
+}
+
+.arrow {
+    position: absolute;
+    width: 14px;
+    right:2%;
+    top:-48%;
+}

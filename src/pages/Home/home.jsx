@@ -3,7 +3,6 @@ import Card from '../../components/Card/card'
 import Banner from '../../components/Banner/banner'
 import HousingList from '../../data/housing.json'
 import HomeBanner from '../../assets/home_banner.png'
-
 import './home.css'
 
 function Home() {

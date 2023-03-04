@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import ArrowDown from '../../assets/arrow_down.svg'
+import ArrowUp from '../../assets/arrow_up.svg'
 import './dropdown.module.scss'
 
 function Dropdown({ title, description }) {
@@ -6,11 +8,20 @@ function Dropdown({ title, description }) {
 
   return isOpen ? (
     <>
-      <li onClick={() => setIsOpen(false)}>{title}</li>
-      <p>{description}</p>
+      <li className="dropdown" onClick={() => setIsOpen(false)}>
+        <p className="title">{title}</p>
+        <img src={ArrowUp} className="arrow" alt="Fermer" />
+      </li>
+
+      <p className="description">{description}</p>
     </>
   ) : (
-    <li onClick={() => setIsOpen(true)}>{title}</li>
+    <>
+      <li className="dropdown" onClick={() => setIsOpen(true)}>
+        <p className="title">{title}</p>
+        <img src={ArrowDown} className="arrow" alt="Ouvrir" />
+      </li>
+    </>
   )
 }
 
