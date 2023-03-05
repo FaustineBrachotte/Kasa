@@ -8,7 +8,7 @@ import './home.module.scss'
 function Home() {
   return (
     <div className="homepage">
-      <Banner src={HomeBanner} />
+      <Banner src={HomeBanner} title="Chez vous, partout et ailleurs" />
       <section className="cards-section">
         {HousingList.map((housing) => (
           <article key={housing.id}>

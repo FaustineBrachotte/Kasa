@@ -1,12 +1,13 @@
 import './banner.module.scss'
 
-function Card({ src }) {
+function Banner({ src, title }) {
   return (
     <div className="banner">
+      <p>{title}</p>
       <img src={src} alt="" />
       <div className="background"></div>
     </div>
   )
 }
 
-export default Card
+export default Banner

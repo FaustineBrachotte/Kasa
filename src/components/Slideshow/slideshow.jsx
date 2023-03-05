@@ -18,7 +18,7 @@ function Slideshow({ pictures }) {
       : updatePicture(pictureNumber + 1)
   }
 
-  return (
+  return numberOfPic > 1 ? (
     <>
       <div className="slideshow">
         <img
@@ -34,6 +34,12 @@ function Slideshow({ pictures }) {
           alt="Suivant"
           onClick={nextPicture}
         />
+      </div>
+    </>
+  ) : (
+    <>
+      <div className="slideshow">
+        <img className="picture" src={pictures[pictureNumber]} alt="Logement" />
       </div>
     </>
   )
