@@ -9,6 +9,7 @@ import Header from './components/Header/header'
 import Footer from './components/Footer'
 import './style/main.scss'
 
+
 const root = createRoot(document.getElementById('root'));
 
 root.render(

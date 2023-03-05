@@ -8,8 +8,12 @@
   font-family: "Montserrat";
   src: url("./police/Montserrat-VariableFont_wght.ttf") format("truetype");
 }
-.about {
-  margin: 200Px;
+.aboutPage {
+  margin: 50px 100px 43px 100px;
+}
+
+.aboutList {
+  margin: 30px 109px 0 80px;
 }
 
 .cards-section {
@@ -26,8 +30,29 @@
 }
 
 .error {
-  color: #FF6060 h1;
-  color-font-size: 288px;
+  color: #FF6060;
+  text-align: center;
+  margin: 100px 0 150px 0;
+}
+.error h1 {
+  font-size: 288px;
+}
+.error p {
+  font-size: 36px;
+  padding-bottom: 182px;
+}
+.error a {
+  color: #FF6060;
+  font-size: 18px;
+}
+
+.housingPage {
+  margin: 0 100px 50px 100px;
+}
+
+.equipments {
+  list-style-type: none;
+  padding: 0;
 }
 
 .header {
@@ -49,9 +74,6 @@
   border-bottom: 1px solid #FF6060;
 }
 
-.banner {
-  margin: 0 100px 43px 100px;
-}
 .banner img {
   width: 100%;
   max-height: 223px;
@@ -97,8 +119,8 @@
 }
 
 .slideshow {
-  margin: 0 100px 30px 100px;
   position: relative;
+  margin-bottom: 30px;
 }
 
 .picture {
@@ -110,8 +132,9 @@
 
 .arrow {
   position: absolute;
-  top: 156.7px;
+  top: -156.7px;
   height: 79.2px;
+  background: red;
 }
 
 .left {
@@ -121,6 +144,35 @@
 .right {
   right: 0;
   margin-right: 23.36px;
+}
+
+.dropdown {
+  position: relative;
+  list-style-type: none;
+  cursor: pointer;
+  margin-top: 31px;
+}
+
+.title {
+  color: white;
+  background: #FF6060;
+  border-radius: 5px;
+  font-size: 24px;
+  padding: 5px 18px 5px 18px;
+}
+
+.description {
+  background: #F7F7F7;
+  padding: 30px 18px 19px 27px;
+  font-size: 24px;
+  color: #FF6060;
+}
+
+.arrow {
+  position: absolute;
+  width: 14px;
+  right: 2%;
+  top: -48%;
 }
 
 /*# sourceMappingURL=style.css.map */

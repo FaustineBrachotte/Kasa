@@ -4,7 +4,65 @@
     margin: 0 100px 50px 100px;
 }
 
+.heading {
+    display: flex;
+    justify-content: space-between;
+    &__left {
+        color: $primary;
+        h1 {
+            font-size: 36px;
+            font-weight: 500;
+            line-height: 51.34px
+        }
+        p {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 25.67px;
+    }
+}}
+
+.host {
+    display: flex;
+    font-size: 18px;
+    color: $primary;
+    p {
+        width: 100px;
+        text-align: right;
+        line-height: 25px;
+        padding: 10px 10px 0 0;
+    }
+    img {
+        height: 64px;
+        width: 64px;
+        border-radius: 50px;
+    }
+}
+
 .equipments {
     list-style-type: none;
     padding: 0;
+}
+
+.tags {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+.tag {
+    margin: 20px 10px 24px 0;
+    background-color: $primary;
+    width: 115px;
+    height: 25px;
+    border-radius: 10px;
+    p {
+        color: white;
+        text-align: center;
+        font-size: 14px;
+        line-height: 25px;
+    }
+}
+
+.dropdowns {
+    display: flex;
 }

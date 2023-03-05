@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 import HousingList from '../../data/housing.json'
 import Slideshow from '../../components/Slideshow/slideshow'
 import Dropdown from '../../components/Dropdown/dropdown'
@@ -12,28 +12,42 @@ function Housing() {
     return (
       <ul className="equipments">
         {housing.equipments.map((equipment) => (
-          <li>{equipment}</li>
+          <li key={equipment}>{equipment}</li>
         ))}
       </ul>
     )
   }
 
-  return (
+  return housing ? (
     <div className="housingPage">
       <Slideshow pictures={housing.pictures} />
-      <h1>{housing.title}</h1>
-      <p>{housing.location}</p>
-      <ul className="tags">
-        {housing.tags.map((tag) => (
-          <li>{tag}</li>
-        ))}
-      </ul>
-      <p>{housing.host.name}</p>
-      <img src={housing.host.picture} alt="Hôte" />
-      <p>{housing.rating}</p>
-      <Dropdown title="Description" description={housing.description} />
-      <Dropdown title="Équipements" description={equipments()} />
+      <div className="heading">
+        <div className="heading__left">
+          <h1>{housing.title}</h1>
+          <p>{housing.location}</p>
+          <ul className="tags">
+            {housing.tags.map((tag) => (
+              <li key={tag} className="tag">
+                <p>{tag}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="heading__right">
+          <div className="host">
+            <p>{housing.host.name}</p>
+            <img src={housing.host.picture} alt="Hôte" />
+          </div>
+          <p>{housing.rating}</p>
+        </div>
+      </div>
+      <div className="dropdowns">
+        <Dropdown title="Description" description={housing.description} />
+        <Dropdown title="Équipements" description={equipments()} />
+      </div>
     </div>
+  ) : (
+    <Navigate to="/error" replace={true} />
   )
 }
 
