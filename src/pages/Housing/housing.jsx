@@ -3,10 +3,31 @@ import HousingList from '../../data/housing.json'
 import Slideshow from '../../components/Slideshow/slideshow'
 import Dropdown from '../../components/Dropdown/dropdown'
 import './housing.module.scss'
+import ActiveStar from '../../assets/star-orange.svg'
+import GreyStar from '../../assets/star-grey.svg'
 
 function Housing() {
   const productId = useParams()
   const housing = HousingList.find((housing) => housing.id === productId.id)
+
+  function stars() {
+    const activeStarsNumber = housing.rating
+    const greyStarsNumber = 5 - activeStarsNumber
+    let activeStars = []
+    let greyStars = []
+    for (let i = 1; i <= activeStarsNumber; i++) {
+      activeStars.push(<img src={ActiveStar} alt="Étoile colorée" />)
+    }
+    for (let i = 1; i <= greyStarsNumber; i++) {
+      greyStars.push(<img src={GreyStar} alt="Étoile grisée" />)
+    }
+    return (
+      <div className="stars">
+        <div>{activeStars}</div>
+        <div>{greyStars}</div>
+      </div>
+    )
+  }
 
   function equipments() {
     return (
@@ -39,6 +60,7 @@ function Housing() {
             <img src={housing.host.picture} alt="Hôte" />
           </div>
           <p>{housing.rating}</p>
+          <div>{stars()}</div>
         </div>
       </div>
       <div className="dropdowns">

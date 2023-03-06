@@ -50,9 +50,68 @@
   margin: 0 100px 50px 100px;
 }
 
+.heading {
+  display: flex;
+  justify-content: space-between;
+}
+.heading__left {
+  color: #FF6060;
+}
+.heading__left h1 {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 51.34px;
+}
+.heading__left p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.67px;
+}
+
+.host {
+  display: flex;
+  font-size: 18px;
+  color: #FF6060;
+}
+.host p {
+  width: 100px;
+  text-align: right;
+  line-height: 25px;
+  padding: 10px 10px 0 0;
+}
+.host img {
+  height: 64px;
+  width: 64px;
+  border-radius: 50px;
+}
+
 .equipments {
   list-style-type: none;
   padding: 0;
+}
+
+.tags {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.tag {
+  margin: 20px 10px 24px 0;
+  background-color: #FF6060;
+  width: 115px;
+  height: 25px;
+  border-radius: 10px;
+}
+.tag p {
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.dropdowns {
+  display: flex;
 }
 
 .header {
@@ -74,18 +133,36 @@
   border-bottom: 1px solid #FF6060;
 }
 
-.banner img {
-  width: 100%;
-  max-height: 223px;
-  object-fit: cover;
+.banner {
+  position: relative;
+  height: 223px;
+  margin-bottom: 35px;
   border-radius: 25px;
+}
+.banner img {
+  border-radius: 25px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.banner p {
+  position: absolute;
+  color: #FFFFFF;
+  font-size: 48px;
+  top: 30%;
+  left: 20%;
+  z-index: 1;
 }
 
 .background {
+  position: absolute;
   background: #000000;
-  mix-blend-mode: darken;
-  opacity: 30%;
+  opacity: 0.3;
+  height: 100%;
+  width: 100%;
   border-radius: 25px;
+  left: 0;
+  top: 0;
 }
 
 .card {
@@ -132,9 +209,9 @@
 
 .arrow {
   position: absolute;
-  top: -156.7px;
+  top: 156.7px;
   height: 79.2px;
-  background: red;
+  cursor: pointer;
 }
 
 .left {
@@ -172,7 +249,7 @@
   position: absolute;
   width: 14px;
   right: 2%;
-  top: -48%;
+  top: 40%;
 }
 
 /*# sourceMappingURL=style.css.map */
