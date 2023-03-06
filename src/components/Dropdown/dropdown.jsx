@@ -8,17 +8,16 @@ function Dropdown({ title, description }) {
 
   return isOpen ? (
     <>
-      <li className="dropdown" onClick={() => setIsOpen(false)}>
-        <p className="title">{title}</p>
+      <li className={style.dropdown} onClick={() => setIsOpen(false)}>
+        <p className={style.title}>{title}</p>
         <img src={ArrowUp} className={style.arrow} alt="Fermer" />
+        <p className={style.description}>{description}</p>
       </li>
-
-      <p className="description">{description}</p>
     </>
   ) : (
     <>
-      <li className="dropdown" onClick={() => setIsOpen(true)}>
-        <p className="title">{title}</p>
+      <li className={style.dropdown} onClick={() => setIsOpen(true)}>
+        <p className={style.title}>{title}</p>
         <img src={ArrowDown} className={style.arrow} alt="Ouvrir" />
       </li>
     </>

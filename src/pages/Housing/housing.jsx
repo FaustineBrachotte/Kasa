@@ -2,9 +2,9 @@ import { useParams, Navigate } from 'react-router-dom'
 import HousingList from '../../data/housing.json'
 import Slideshow from '../../components/Slideshow/slideshow'
 import Dropdown from '../../components/Dropdown/dropdown'
-import './housing.module.scss'
 import ActiveStar from '../../assets/star-orange.svg'
 import GreyStar from '../../assets/star-grey.svg'
+import style from './housing.module.scss'
 
 function Housing() {
   const productId = useParams()
@@ -63,9 +63,13 @@ function Housing() {
           <div>{stars()}</div>
         </div>
       </div>
-      <div className="dropdowns">
-        <Dropdown title="Description" description={housing.description} />
-        <Dropdown title="Équipements" description={equipments()} />
+      <div className={style.dropdowns}>
+        <div className={style.dropdown}>
+          <Dropdown title="Description" description={housing.description} />
+        </div>
+        <div className={style.dropdown}>
+          <Dropdown title="Équipements" description={equipments()} />
+        </div>
       </div>
     </div>
   ) : (

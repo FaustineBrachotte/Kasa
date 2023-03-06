@@ -69,4 +69,10 @@
 
 .dropdowns {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.dropdown {
+    width : 582px;
 }
