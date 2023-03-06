@@ -3,7 +3,7 @@ import './banner.module.scss'
 function Banner({ src, title }) {
   return (
     <div className="banner">
-      <p>{title}</p>
+      <h1>{title}</h1>
       <img src={src} alt="" />
       <div className="background"></div>
     </div>

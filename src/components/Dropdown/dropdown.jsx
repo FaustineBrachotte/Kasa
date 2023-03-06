@@ -11,7 +11,7 @@ function Dropdown({ title, description }) {
       <li className={style.dropdown} onClick={() => setIsOpen(false)}>
         <p className={style.title}>{title}</p>
         <img src={ArrowUp} className={style.arrow} alt="Fermer" />
-        <p className={style.description}>{description}</p>
+        <div className={style.description}>{description}</div>
       </li>
     </>
   ) : (

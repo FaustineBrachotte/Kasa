@@ -16,13 +16,13 @@ function Housing() {
     let activeStars = []
     let greyStars = []
     for (let i = 1; i <= activeStarsNumber; i++) {
-      activeStars.push(<img src={ActiveStar} alt="Étoile colorée" />)
+      activeStars.push(<img key={i} src={ActiveStar} alt="Étoile colorée" />)
     }
     for (let i = 1; i <= greyStarsNumber; i++) {
-      greyStars.push(<img src={GreyStar} alt="Étoile grisée" />)
+      greyStars.push(<img key={i} src={GreyStar} alt="Étoile grisée" />)
     }
     return (
-      <div className="stars">
+      <div className={style.subheading__stars}>
         <div>{activeStars}</div>
         <div>{greyStars}</div>
       </div>
@@ -31,7 +31,7 @@ function Housing() {
 
   function equipments() {
     return (
-      <ul className="equipments">
+      <ul className={style.dropdowns__dropdown__equipments}>
         {housing.equipments.map((equipment) => (
           <li key={equipment}>{equipment}</li>
         ))}
@@ -40,34 +40,33 @@ function Housing() {
   }
 
   return housing ? (
-    <div className="housingPage">
+    <div className={style.page}>
       <Slideshow pictures={housing.pictures} />
-      <div className="heading">
-        <div className="heading__left">
+      <div className={style.heading}>
+        <div>
           <h1>{housing.title}</h1>
           <p>{housing.location}</p>
-          <ul className="tags">
-            {housing.tags.map((tag) => (
-              <li key={tag} className="tag">
-                <p>{tag}</p>
-              </li>
-            ))}
-          </ul>
         </div>
-        <div className="heading__right">
-          <div className="host">
-            <p>{housing.host.name}</p>
-            <img src={housing.host.picture} alt="Hôte" />
-          </div>
-          <p>{housing.rating}</p>
-          <div>{stars()}</div>
+        <div className={style.heading__host}>
+          <p>{housing.host.name}</p>
+          <img src={housing.host.picture} alt="Hôte" />
         </div>
       </div>
+      <div className={style.subheading}>
+        <ul className={style.subheading__tags}>
+          {housing.tags.map((tag) => (
+            <li key={tag} className={style.subheading__tags__tag}>
+              {tag}
+            </li>
+          ))}
+        </ul>
+        <div>{stars()}</div>
+      </div>
       <div className={style.dropdowns}>
-        <div className={style.dropdown}>
+        <div className={style.dropdowns__dropdown}>
           <Dropdown title="Description" description={housing.description} />
         </div>
-        <div className={style.dropdown}>
+        <div className={style.dropdowns__dropdown}>
           <Dropdown title="Équipements" description={equipments()} />
         </div>
       </div>

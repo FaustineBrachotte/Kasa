@@ -1,69 +1,70 @@
 @import '../../style/variables.module.scss';
 
-.housingPage {
+.page {
     margin: 0 100px 50px 100px;
 }
 
 .heading {
     display: flex;
     justify-content: space-between;
-    &__left {
-        color: $primary;
+    color: $primary;
+    font-weight: 500;
         h1 {
             font-size: 36px;
-            font-weight: 500;
-            line-height: 51.34px
-        }
+            line-height: 51.34px;
+            }
         p {
             font-size: 18px;
-            font-weight: 500;
             line-height: 25.67px;
+            margin-bottom: 20px;
     }
-}}
-
-.host {
-    display: flex;
-    font-size: 18px;
-    color: $primary;
-    p {
-        width: 100px;
-        text-align: right;
-        line-height: 25px;
-        padding: 10px 10px 0 0;
+    &__host {
+        display: flex;
+        font-size: 18px;
+        color: $primary;
+        p {
+            width: 100px;
+            text-align: right;
+            line-height: 25px;
+            padding: 10px 10px 0 0;
+        }
+        img {
+            height: 64px;
+            width: 64px;
+            border-radius: 50px;
+        }
     }
-    img {
-        height: 64px;
-        width: 64px;
-        border-radius: 50px;
+}
+
+.subheading {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    &__tags {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        &__tag {
+            margin: 0 10px 24px 0;
+            background-color: $primary;
+            min-width: 115px;
+            height: 25px;
+            border-radius: 10px;
+            
+                color: white;
+                text-align: center;
+                font-size: 14px;
+                line-height: 25px;
+            
+        }
     }
-}
-
-.stars {
-    display: flex;
-}
-
-.equipments {
-    list-style-type: none;
-    padding: 0;
-}
-
-.tags {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-}
-
-.tag {
-    margin: 20px 10px 24px 0;
-    background-color: $primary;
-    width: 115px;
-    height: 25px;
-    border-radius: 10px;
-    p {
-        color: white;
-        text-align: center;
-        font-size: 14px;
-        line-height: 25px;
+    &__stars {
+        display: flex;
+        justify-self: baseline;
+        img {
+            width: 30px;
+            padding-left: 10px;
+        }
     }
 }
 
@@ -71,8 +72,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-
-.dropdown {
-    width : 582px;
+    &__dropdown {
+        min-width : 582px;
+        width: 48%;
+        &__equipments {
+            list-style-type: none;
+            padding: 0;
+        }
+    }
 }
