@@ -4,15 +4,27 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 40px;
     font-size: 24px;
     font-weight: 500;
-    color: white;
-    background-color: black;
+    color: #FFFFFF;
+    background-color: #000000;
     padding-bottom: 35px;
     img {
         height: 36.11px;
-        margin-bottom: 31.78px;
         margin-top: 66px;
     }
+    p {
+        margin-top: 31.67px;
+    }
 }
+
+/* Format mobile */
+
+@media all and (max-width: 768px) {
+    footer {
+        font-size: 12px;
+        p {
+            margin-top: 20px;
+        }
+    }
+  }

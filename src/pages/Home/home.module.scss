@@ -9,5 +9,13 @@
 }
 
 .homepage {
-    margin: 0 100px 0 100px;
+    margin: 63px 100px 0 100px;
+}
+
+/* Format mobile */
+
+@media all and (max-width: 768px) {
+    .homepage {
+        margin: 16px 20px 0 20px;
+    }
 }

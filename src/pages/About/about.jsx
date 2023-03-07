@@ -1,14 +1,14 @@
 import Banner from '../../components/Banner/banner'
-import AboutBanner from '../../assets/about_banner.png'
+import AboutBanner from '../../assets/about_banner.jpg'
 import Dropdown from '../../components/Dropdown/dropdown'
 import { aboutList } from '../../data/aboutList'
-import './about.module.scss'
+import style from './about.module.scss'
 
 function About() {
   return (
-    <div className="aboutPage">
+    <div className={style.page}>
       <Banner src={AboutBanner} />
-      <ul className="aboutList">
+      <ul className={style.page__list}>
         {aboutList.map(({ id, title, description }) => (
           <Dropdown key={id} title={title} description={description} />
         ))}

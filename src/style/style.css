@@ -36,82 +36,97 @@
 }
 .error h1 {
   font-size: 288px;
+  font-weight: 700;
 }
 .error p {
   font-size: 36px;
+  font-weight: 500;
   padding-bottom: 182px;
 }
 .error a {
   color: #FF6060;
   font-size: 18px;
+  font-weight: 500;
 }
 
-.housingPage {
+.page {
   margin: 0 100px 50px 100px;
 }
 
 .heading {
   display: flex;
   justify-content: space-between;
-}
-.heading__left {
   color: #FF6060;
-}
-.heading__left h1 {
-  font-size: 36px;
   font-weight: 500;
+}
+.heading h1 {
+  font-size: 36px;
   line-height: 51.34px;
 }
-.heading__left p {
+.heading p {
   font-size: 18px;
-  font-weight: 500;
   line-height: 25.67px;
+  margin-bottom: 20px;
 }
-
-.host {
+.heading__host {
   display: flex;
   font-size: 18px;
   color: #FF6060;
 }
-.host p {
+.heading__host p {
   width: 100px;
   text-align: right;
   line-height: 25px;
   padding: 10px 10px 0 0;
 }
-.host img {
+.heading__host img {
   height: 64px;
   width: 64px;
   border-radius: 50px;
 }
 
-.equipments {
-  list-style-type: none;
-  padding: 0;
+.subheading {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
 }
-
-.tags {
+.subheading__tags {
   display: flex;
   list-style-type: none;
   padding: 0;
 }
-
-.tag {
-  margin: 20px 10px 24px 0;
+.subheading__tags__tag {
+  margin: 0 10px 24px 0;
   background-color: #FF6060;
-  width: 115px;
+  min-width: 115px;
   height: 25px;
   border-radius: 10px;
-}
-.tag p {
   color: white;
   text-align: center;
   font-size: 14px;
   line-height: 25px;
 }
+.subheading__stars {
+  display: flex;
+  justify-self: baseline;
+}
+.subheading__stars img {
+  width: 30px;
+  padding-left: 10px;
+}
 
 .dropdowns {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.dropdowns__dropdown {
+  min-width: 582px;
+  width: 48%;
+}
+.dropdowns__dropdown__equipments {
+  list-style-type: none;
+  padding: 0;
 }
 
 .header {
@@ -127,6 +142,7 @@
   text-decoration: none;
   color: #FF6060;
   font-size: 24px;
+  font-weight: 500;
   margin-left: 57px;
 }
 .nav a:hover {
@@ -145,10 +161,11 @@
   width: 100%;
   object-fit: cover;
 }
-.banner p {
+.banner h1 {
   position: absolute;
   color: #FFFFFF;
-  font-size: 48px;
+  font-size: 36px;
+  font-weight: 500;
   top: 30%;
   left: 20%;
   z-index: 1;
@@ -235,6 +252,7 @@
   background: #FF6060;
   border-radius: 5px;
   font-size: 24px;
+  font-weight: 500;
   padding: 5px 18px 5px 18px;
 }
 
@@ -242,6 +260,7 @@
   background: #F7F7F7;
   padding: 30px 18px 19px 27px;
   font-size: 24px;
+  font-weight: 400;
   color: #FF6060;
 }
 
@@ -249,7 +268,7 @@
   position: absolute;
   width: 14px;
   right: 2%;
-  top: 40%;
+  top: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

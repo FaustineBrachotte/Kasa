@@ -1,7 +1,19 @@
-.aboutPage {
-    margin: 50px 100px 43px 100px;
+.page {
+    margin: 49.36px 100px 50px 100px;
+    &__list {
+        margin: 31px 109px 0 108px;
+        padding-left: 0;
+    }
 }
 
-.aboutList {
-    margin: 30px 109px 0 80px;
-}
+/* Format mobile */
+
+@media all and (max-width: 768px) {
+    .page {
+        margin: 17px 20px 25px 20px;
+        &__list {
+            margin: 19px 0 0 0;
+            padding-left: 0;
+        }
+    }
+  }
