@@ -1,7 +1,7 @@
 @import '../../style/variables.module.scss';
 
 .page {
-    margin: 0 100px 50px 100px;
+    margin: 20px 100px 50px 100px;
 }
 
 .heading {
@@ -9,37 +9,14 @@
     justify-content: space-between;
     color: $primary;
     font-weight: 500;
-        h1 {
-            font-size: 36px;
-            line-height: 51.34px;
-            }
-        p {
-            font-size: 18px;
-            line-height: 25.67px;
-            margin-bottom: 20px;
-    }
-    &__host {
-        display: flex;
+    h1 {
+        font-size: 36px;
+        padding-bottom: 5px;
+        }
+    p {
         font-size: 18px;
-        color: $primary;
-        p {
-            width: 100px;
-            text-align: right;
-            line-height: 25px;
-            padding: 10px 10px 0 0;
-        }
-        img {
-            height: 64px;
-            width: 64px;
-            border-radius: 50px;
-        }
+        margin-bottom: 20px;
     }
-}
-
-.subheading {
-    display: flex;
-    justify-content: space-between;
-    font-weight: 500;
     &__tags {
         display: flex;
         list-style-type: none;
@@ -50,12 +27,31 @@
             min-width: 115px;
             height: 25px;
             border-radius: 10px;
-            
-                color: white;
-                text-align: center;
-                font-size: 14px;
-                line-height: 25px;
-            
+            color: white;
+            text-align: center;
+            font-size: 14px;
+            line-height: 25px;
+        }
+    }
+}
+
+.subheading {
+    justify-content: space-between;
+    font-weight: 500;
+    &__host {
+        display: flex;
+        color: $primary;
+        p {
+            width: 100px;
+            text-align: right;
+            line-height: 25px;
+            font-size: 18px;
+            padding: 10px 10px 0 0;
+        }
+        img {
+            height: 64px;
+            width: 64px;
+            border-radius: 50px;
         }
     }
     &__stars {
@@ -81,3 +77,55 @@
         }
     }
 }
+
+/* Format mobile */
+
+@media all and (max-width: 768px) {
+    .page {
+        margin: 27px 20px;
+    }
+    .heading {
+        display: flex;
+        flex-direction: column;
+        h1 {
+            font-size: 18px;
+            }
+        p {
+            font-size: 14px;
+            margin-bottom: 10px;
+
+        }
+        &__tags {
+            &__tag {
+                font-size: 10px;
+                height: 18px;
+                min-width: 84px;
+                line-height: 17px;
+                margin-bottom: 0;
+            }
+        }
+  }
+  .subheading {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      &__host {
+        p {
+            line-height: 20px;
+            font-size: 12px;
+            width: 50px;
+        }
+        img {
+            height: 32px;
+            width: 32px;
+            border-radius: 50px;
+            margin-top: 14px;
+        }
+    }
+    &__stars {
+        img {
+            width: 15px;
+            padding-left: 5px;
+        }
+    }
+} }

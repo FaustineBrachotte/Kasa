@@ -19,3 +19,20 @@
         font-weight: 500;
     }
 }
+
+/* Format mobile */
+
+@media all and (max-width: 768px) {
+    .error {
+        h1 {
+            font-size: 96px;
+        }
+        p {
+            font-size: 18px;
+            padding-bottom: 133px;
+        }
+        a {
+            font-size: 14px;
+        }
+    }
+  }

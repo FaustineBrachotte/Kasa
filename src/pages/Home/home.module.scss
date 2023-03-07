@@ -1,21 +1,28 @@
-.cards-section {
+.page {
+    margin: 63px 100px 0 100px;
+}
+
+.cards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: #F7F7F7;
+    background: #F7F7F7;
     margin: 43px 0 43px 0;
     border-radius: 25px;
-    
+    padding: 56px 50px;
 }
 
-.homepage {
-    margin: 63px 100px 0 100px;
-}
+
 
 /* Format mobile */
 
 @media all and (max-width: 768px) {
-    .homepage {
+    .page {
         margin: 16px 20px 0 20px;
+    }
+    .cards {
+        background: none;
+        margin: 0;
+        padding: 22px 0;
     }
 }

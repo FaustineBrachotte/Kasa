@@ -46,21 +46,21 @@ function Housing() {
         <div>
           <h1>{housing.title}</h1>
           <p>{housing.location}</p>
+          <ul className={style.heading__tags}>
+            {housing.tags.map((tag) => (
+              <li key={tag} className={style.heading__tags__tag}>
+                {tag}
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className={style.heading__host}>
-          <p>{housing.host.name}</p>
-          <img src={housing.host.picture} alt="Hôte" />
+        <div className={style.subheading}>
+          <div className={style.subheading__host}>
+            <p>{housing.host.name}</p>
+            <img src={housing.host.picture} alt="Hôte" />
+          </div>
+          <div>{stars()}</div>
         </div>
-      </div>
-      <div className={style.subheading}>
-        <ul className={style.subheading__tags}>
-          {housing.tags.map((tag) => (
-            <li key={tag} className={style.subheading__tags__tag}>
-              {tag}
-            </li>
-          ))}
-        </ul>
-        <div>{stars()}</div>
       </div>
       <div className={style.dropdowns}>
         <div className={style.dropdowns__dropdown}>
