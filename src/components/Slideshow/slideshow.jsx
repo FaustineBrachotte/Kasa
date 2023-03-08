@@ -20,17 +20,21 @@ function Slideshow({ pictures }) {
 
   return numberOfPic > 1 ? (
     <>
-      <div className="slideshow">
+      <div className={style.slideshow}>
         <img
           src={ArrowLeft}
-          className={`${style.arrow} ${style.left}`}
+          className={`${style.slideshow__arrow} ${style.slideshow__arrow__left}`}
           alt="Précédent"
           onClick={prevPicture}
         />
-        <img className="picture" src={pictures[pictureNumber]} alt="Logement" />
+        <img
+          className={style.slideshow__picture}
+          src={pictures[pictureNumber]}
+          alt="Logement"
+        />
         <img
           src={ArrowRight}
-          className={`${style.arrow} ${style.right}`}
+          className={`${style.slideshow__arrow} ${style.slideshow__arrow__right}`}
           alt="Suivant"
           onClick={nextPicture}
         />
@@ -38,8 +42,12 @@ function Slideshow({ pictures }) {
     </>
   ) : (
     <>
-      <div className="slideshow">
-        <img className="picture" src={pictures[pictureNumber]} alt="Logement" />
+      <div className={style.slideshow}>
+        <img
+          className={style.slideshow__picture}
+          src={pictures[pictureNumber]}
+          alt="Logement"
+        />
       </div>
     </>
   )

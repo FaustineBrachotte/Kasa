@@ -59,6 +59,7 @@
         justify-self: baseline;
         img {
             width: 30px;
+            height: 30px;
             padding-left: 10px;
         }
     }
@@ -70,7 +71,6 @@
     justify-content: space-between;
     &__dropdown {
         min-width : 582px;
-        width: 48%;
         &__equipments {
             list-style-type: none;
             padding: 0;
@@ -105,27 +105,34 @@
             }
         }
   }
-  .subheading {
-      display: flex;
-      flex-direction: row-reverse;
-      align-items: center;
-      &__host {
-        p {
-            line-height: 20px;
-            font-size: 12px;
-            width: 50px;
-        }
+    .subheading {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        &__host {
+            p {
+                line-height: 20px;
+                font-size: 12px;
+                width: 70px;
+            }
         img {
             height: 32px;
             width: 32px;
             border-radius: 50px;
             margin-top: 14px;
+            }
+        }
+        &__stars {
+            img {
+                width: 15px;
+                padding-left: 5px;
+            }
+        }
+    } 
+    .dropdowns {
+        &__dropdown {
+        width: 100%;
+        min-width : 100px;   
         }
     }
-    &__stars {
-        img {
-            width: 15px;
-            padding-left: 5px;
-        }
-    }
-} }
+}
