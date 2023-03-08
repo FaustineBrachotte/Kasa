@@ -71,6 +71,7 @@
     justify-content: space-between;
     &__dropdown {
         min-width : 582px;
+        width: 48%;
         &__equipments {
             list-style-type: none;
             padding: 0;
@@ -132,7 +133,7 @@
     .dropdowns {
         &__dropdown {
         width: 100%;
-        min-width : 100px;   
+        min-width : 235px;   
         }
     }
 }
