@@ -4,27 +4,27 @@
     position: relative;
     list-style-type: none;
     cursor: pointer;
-    margin-top: 31px;
+    margin-bottom: 31px;
     &__title {
         color: white;
         background: $primary;
         border-radius: 5px;
         font-size: 24px;
         font-weight: 500;
-        padding: 5px 18px 5px 18px;
+        padding: 5px 18px;
     }
     &__description {
-    background: #F7F7F7;
-    padding: 30px 18px 19px 27px;
-    font-size: 24px;
-    font-weight: 400;
-    color: $primary;
+        background: #F7F7F7;
+        padding: 30px 18px 19px 27px;
+        font-size: 24px;
+        font-weight: 400;
+        color: $primary;
     }
     &__arrow {
         position: absolute;
         width: 14.06px;
-        right:2%;
-        top: 15px;
+        right:3%;
+        top: 16px;
     }
 }
 
@@ -32,17 +32,17 @@
 
 @media all and (max-width: 768px) {
     .dropdown {
-        margin-top: 19px;
+        margin-bottom: 19px;
         &__title {
             font-size: 13px;
         }
         &__description {
-        font-size: 12px;
+            padding: 11px 23px;
+            font-size: 12px;
         }
         &__arrow {
             position: absolute;
             width: 8.98px;
-            right:2%;
             top: 11px;
         }
     }

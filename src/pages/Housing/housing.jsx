@@ -2,8 +2,8 @@ import { useParams, Navigate } from 'react-router-dom'
 import HousingList from '../../data/housing.json'
 import Slideshow from '../../components/Slideshow/slideshow'
 import Dropdown from '../../components/Dropdown/dropdown'
-import ActiveStar from '../../assets/star-orange.svg'
-import GreyStar from '../../assets/star-grey.svg'
+import ActiveStar from '../../assets/star_orange.svg'
+import GreyStar from '../../assets/star_grey.svg'
 import style from './housing.module.scss'
 
 function Housing() {

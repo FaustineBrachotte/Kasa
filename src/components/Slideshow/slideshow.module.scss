@@ -1,6 +1,5 @@
 .slideshow {
     position: relative;
-    margin-bottom: 30px;
     &__picture {
         height: 415px;
         width: 100%;
@@ -16,7 +15,7 @@
             margin-left: 23.36px;
         }
         &__right {
-            right:0;
+            right: 0;
             margin-right: 23.36px;
         }
     }
@@ -27,13 +26,19 @@
 
 @media all and (max-width: 768px) {
     .slideshow {
-        margin-bottom: 15px;
         &__picture {
-        height: 255px;
+            height: 255px;
+            border-radius: 10px;
         }
         &__arrow {
-        top: 116.7px;
-        height: 19.8px;
+            top: 116.7px;
+            height: 19.8px;
+            &__left {
+                margin-left: 5.84px;
+            }
+            &__right {
+                margin-right: 5.84px;
+            }
         }
     }
 }

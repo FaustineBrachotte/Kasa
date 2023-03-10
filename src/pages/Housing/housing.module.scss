@@ -1,7 +1,7 @@
 @import '../../style/variables.module.scss';
 
 .page {
-    margin: 20px 100px 50px 100px;
+    margin: 20px 100px 20px 100px;
 }
 
 .heading {
@@ -9,12 +9,14 @@
     justify-content: space-between;
     color: $primary;
     font-weight: 500;
+    margin-top: 30px;
     h1 {
         font-size: 36px;
-        padding-bottom: 5px;
+        line-height: 51.34px;
         }
     p {
         font-size: 18px;
+        line-height: 25.67px;
         margin-bottom: 20px;
     }
     &__tags {
@@ -24,6 +26,7 @@
         &__tag {
             margin: 0 10px 24px 0;
             background-color: $primary;
+            padding: 0 10px;
             min-width: 115px;
             height: 25px;
             border-radius: 10px;
@@ -44,7 +47,7 @@
         p {
             width: 100px;
             text-align: right;
-            line-height: 25px;
+            line-height: 25.67px;
             font-size: 18px;
             padding: 10px 10px 0 0;
         }
@@ -83,25 +86,28 @@
 
 @media all and (max-width: 768px) {
     .page {
-        margin: 27px 20px;
+        margin: 27px 20px 10px 20px;
     }
     .heading {
         display: flex;
         flex-direction: column;
+        margin-top: 15px;
         h1 {
             font-size: 18px;
+            line-height: 25.67px;
+            padding-bottom: 5px;
             }
         p {
             font-size: 14px;
+            line-height: 19.96px;
             margin-bottom: 10px;
-
         }
         &__tags {
             &__tag {
                 font-size: 10px;
                 height: 18px;
                 min-width: 84px;
-                line-height: 17px;
+                line-height: 18px;
                 margin-bottom: 0;
             }
         }
@@ -110,9 +116,10 @@
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
+        margin-bottom: 10px;
         &__host {
             p {
-                line-height: 20px;
+                line-height: 17.11px;
                 font-size: 12px;
                 width: 70px;
             }
@@ -120,12 +127,13 @@
             height: 32px;
             width: 32px;
             border-radius: 50px;
-            margin-top: 14px;
+            margin-top: 10.5px;
             }
         }
         &__stars {
             img {
                 width: 15px;
+                height: 15px;
                 padding-left: 5px;
             }
         }

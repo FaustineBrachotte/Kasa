@@ -9,6 +9,7 @@
       font-size: 48px;
       font-weight: 500;
       z-index: 1;
+      width: 100%;
       top: 50%;  
       left: 50%;
       transform: translate(-50%, -50%)
@@ -40,12 +41,14 @@
     height: 111px;
     img {
         border-radius: 10px;
-        object-position: bottom;
       }
     h1 {
         font-size: 24px;
-        width: 240px;
         text-align: unset;
+        padding-left: 16px;
+        top: 0%;  
+        left: 0%;
+        transform: translate(0%, 50%)
     }
     &__background {
       border-radius: 10px;
