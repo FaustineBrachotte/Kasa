@@ -8,7 +8,11 @@ import style from './home.module.scss'
 function Home() {
   return (
     <div className={style.page}>
-      <Banner src={HomeBanner} title="Chez vous, partout et ailleurs" />
+      <Banner
+        parentClass="banner__small"
+        src={HomeBanner}
+        title="Chez vous, partout et ailleurs"
+      />
       <section className={style.cards}>
         {HousingList.map((housing) => (
           <article key={housing.id}>

@@ -8,11 +8,16 @@ function About() {
   return (
     <div className={style.page}>
       <Banner src={AboutBanner} />
-      <ul className={style.page__list}>
+      <div className={style.page__list}>
         {aboutList.map(({ id, title, description }) => (
-          <Dropdown key={id} title={title} description={description} />
+          <Dropdown
+            key={id}
+            title={title}
+            description={description}
+            parentClass="about"
+          />
         ))}
-      </ul>
+      </div>
     </div>
   )
 }

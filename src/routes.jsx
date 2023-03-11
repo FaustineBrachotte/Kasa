@@ -6,14 +6,14 @@ import Error from './pages/Error/error'
 import About from './pages/About/about'
 
 function AppRoutes() {
-    return(
-            <Routes>
-                <Route path="*" element={<Error />} />
-                <Route path="/" element={<Home />} />
-                <Route path="/housing/:id" element={<Housing />} />
-                <Route path="/about" element={<About />} />
-            </Routes>
-    )
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/housing/:id" element={<Housing />} />
+      <Route path="/about" element={<About />} />
+      <Route path="*" element={<Error />} />
+    </Routes>
+  )
 }
 
-export default AppRoutes;
+export default AppRoutes

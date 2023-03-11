@@ -7,12 +7,15 @@ function Slideshow({ pictures }) {
   const [pictureNumber, updatePicture] = useState(0)
   const numberOfPic = pictures.length
 
-  const prevPicture = () => {
+  // Calcul de l'index de l'image précédente
+  function prevPicture() {
     pictureNumber === 0
       ? updatePicture(numberOfPic - 1)
       : updatePicture(pictureNumber - 1)
   }
-  const nextPicture = () => {
+
+  // Calcul de l'index de l'image suivante
+  function nextPicture() {
     pictureNumber === pictures.length - 1
       ? updatePicture(0)
       : updatePicture(pictureNumber + 1)
@@ -41,6 +44,7 @@ function Slideshow({ pictures }) {
       </div>
     </>
   ) : (
+    // N'affiche pas les flèches si l'image est unique
     <>
       <div className={style.slideshow}>
         <img

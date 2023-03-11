@@ -36,9 +36,9 @@
   justify-content: center;
   flex-wrap: wrap;
   background: #F7F7F7;
-  margin: 43px 0 43px 0;
+  margin: 43px 0;
   border-radius: 25px;
-  padding: 56px 50px;
+  padding: 31px 20px;
 }
 
 /* Format mobile */
@@ -49,7 +49,7 @@
   .cards {
     background: none;
     margin: 0;
-    padding: 22px 0;
+    padding: 12px 0;
   }
 }
 /* Couleurs */
@@ -80,6 +80,7 @@
   }
   .error p {
     font-size: 18px;
+    margin: 0 57px;
     padding-bottom: 133px;
   }
   .error a {
@@ -88,7 +89,7 @@
 }
 /* Couleurs */
 .page {
-  margin: 20px 100px 50px 100px;
+  margin: 20px 100px 20px 100px;
 }
 
 .heading {
@@ -96,13 +97,15 @@
   justify-content: space-between;
   color: #FF6060;
   font-weight: 500;
+  margin-top: 30px;
 }
 .heading h1 {
   font-size: 36px;
-  padding-bottom: 5px;
+  line-height: 51.34px;
 }
 .heading p {
   font-size: 18px;
+  line-height: 25.67px;
   margin-bottom: 20px;
 }
 .heading__tags {
@@ -113,6 +116,7 @@
 .heading__tags__tag {
   margin: 0 10px 24px 0;
   background-color: #FF6060;
+  padding: 0 10px;
   min-width: 115px;
   height: 25px;
   border-radius: 10px;
@@ -133,7 +137,7 @@
 .subheading__host p {
   width: 100px;
   text-align: right;
-  line-height: 25px;
+  line-height: 25.67px;
   font-size: 18px;
   padding: 10px 10px 0 0;
 }
@@ -169,33 +173,38 @@
 /* Format mobile */
 @media all and (max-width: 768px) {
   .page {
-    margin: 27px 20px;
+    margin: 27px 20px 10px 20px;
   }
   .heading {
     display: flex;
     flex-direction: column;
+    margin-top: 15px;
   }
   .heading h1 {
     font-size: 18px;
+    line-height: 25.67px;
+    padding-bottom: 5px;
   }
   .heading p {
     font-size: 14px;
+    line-height: 19.96px;
     margin-bottom: 10px;
   }
   .heading__tags__tag {
     font-size: 10px;
     height: 18px;
     min-width: 84px;
-    line-height: 17px;
+    line-height: 18px;
     margin-bottom: 0;
   }
   .subheading {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    margin-bottom: 10px;
   }
   .subheading__host p {
-    line-height: 20px;
+    line-height: 17.11px;
     font-size: 12px;
     width: 70px;
   }
@@ -203,10 +212,11 @@
     height: 32px;
     width: 32px;
     border-radius: 50px;
-    margin-top: 14px;
+    margin-top: 10.5px;
   }
   .subheading__stars img {
     width: 15px;
+    height: 15px;
     padding-left: 5px;
   }
   .dropdowns__dropdown {
@@ -263,6 +273,7 @@
   font-size: 48px;
   font-weight: 500;
   z-index: 1;
+  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -291,12 +302,14 @@
   }
   .banner img {
     border-radius: 10px;
-    object-position: bottom;
   }
   .banner h1 {
     font-size: 24px;
-    width: 240px;
     text-align: unset;
+    padding-left: 16px;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 50%);
   }
   .banner__background {
     border-radius: 10px;
@@ -306,7 +319,7 @@
   position: relative;
   width: 340px;
   height: 340px;
-  margin: 25px 30px 25px 30px;
+  margin: 25px 30px;
   border-radius: 10px;
 }
 .card img {
@@ -349,7 +362,6 @@
 }
 .slideshow {
   position: relative;
-  margin-bottom: 30px;
 }
 .slideshow__picture {
   height: 415px;
@@ -373,15 +385,19 @@
 
 /* Format mobile */
 @media all and (max-width: 768px) {
-  .slideshow {
-    margin-bottom: 15px;
-  }
   .slideshow__picture {
     height: 255px;
+    border-radius: 10px;
   }
   .slideshow__arrow {
     top: 116.7px;
     height: 19.8px;
+  }
+  .slideshow__arrow__left {
+    margin-left: 5.84px;
+  }
+  .slideshow__arrow__right {
+    margin-right: 5.84px;
   }
 }
 /* Couleurs */
@@ -389,7 +405,7 @@
   position: relative;
   list-style-type: none;
   cursor: pointer;
-  margin-top: 31px;
+  margin-bottom: 31px;
 }
 .dropdown__title {
   color: white;
@@ -397,7 +413,7 @@
   border-radius: 5px;
   font-size: 24px;
   font-weight: 500;
-  padding: 5px 18px 5px 18px;
+  padding: 5px 18px;
 }
 .dropdown__description {
   background: #F7F7F7;
@@ -409,25 +425,25 @@
 .dropdown__arrow {
   position: absolute;
   width: 14.06px;
-  right: 2%;
-  top: 15px;
+  right: 3%;
+  top: 16px;
 }
 
 /* Format mobile */
 @media all and (max-width: 768px) {
   .dropdown {
-    margin-top: 19px;
+    margin-bottom: 19px;
   }
   .dropdown__title {
     font-size: 13px;
   }
   .dropdown__description {
+    padding: 11px 23px;
     font-size: 12px;
   }
   .dropdown__arrow {
     position: absolute;
     width: 8.98px;
-    right: 2%;
     top: 11px;
   }
 }

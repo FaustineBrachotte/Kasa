@@ -3,23 +3,31 @@ import ArrowDown from '../../assets/arrow_down.svg'
 import ArrowUp from '../../assets/arrow_up.svg'
 import style from './dropdown.module.scss'
 
-function Dropdown({ title, description }) {
+function Dropdown({ parentClass, title, description }) {
   const [isOpen, setIsOpen] = useState(false)
 
   return isOpen ? (
     <>
-      <li className={style.dropdown} onClick={() => setIsOpen(false)}>
-        <p className={style.dropdown__title}>{title}</p>
-        <img className={style.dropdown__arrow} src={ArrowUp} alt="Fermer" />
-        <div className={style.dropdown__description}>{description}</div>
-      </li>
+      <div
+        className={`${style.dropdown} ${parentClass}`}
+        onClick={() => setIsOpen(false)}
+      >
+        <h2>{title}</h2>
+        <img src={ArrowUp} alt="Fermer" />
+        <div className={`${style.dropdown__description} ${parentClass}`}>
+          {description}
+        </div>
+      </div>
     </>
   ) : (
     <>
-      <li className={style.dropdown} onClick={() => setIsOpen(true)}>
-        <p className={style.dropdown__title}>{title}</p>
-        <img className={style.dropdown__arrow} src={ArrowDown} alt="Ouvrir" />
-      </li>
+      <div
+        className={`${style.dropdown} ${parentClass}`}
+        onClick={() => setIsOpen(true)}
+      >
+        <h2>{title}</h2>
+        <img src={ArrowDown} alt="Ouvrir" />
+      </div>
     </>
   )
 }

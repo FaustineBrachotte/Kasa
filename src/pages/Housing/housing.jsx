@@ -10,7 +10,7 @@ function Housing() {
   const productId = useParams()
   const housing = HousingList.find((housing) => housing.id === productId.id)
 
-  /* Transforme la valeur de rating en étoiles */
+  // Transforme la valeur de rating en étoiles
   function stars() {
     const activeStarsNumber = housing.rating
     const greyStarsNumber = 5 - activeStarsNumber
@@ -30,7 +30,7 @@ function Housing() {
     )
   }
 
-  /* Récupère la liste des équipements */
+  // Récupère la liste des équipements
   function equipments() {
     return (
       <ul className={style.dropdowns__dropdown__equipments}>
@@ -66,14 +66,23 @@ function Housing() {
       </div>
       <div className={style.dropdowns}>
         <div className={style.dropdowns__dropdown}>
-          <Dropdown title="Description" description={housing.description} />
+          <Dropdown
+            title="Description"
+            description={housing.description}
+            parentClass="housing"
+          />
         </div>
         <div className={style.dropdowns__dropdown}>
-          <Dropdown title="Équipements" description={equipments()} />
+          <Dropdown
+            title="Équipements"
+            description={equipments()}
+            parentClass="housing"
+          />
         </div>
       </div>
     </div>
   ) : (
+    // Redirection vers la page d'erreur si l'identifiant du logement n'exite pas
     <Navigate to="/error" replace={true} />
   )
 }

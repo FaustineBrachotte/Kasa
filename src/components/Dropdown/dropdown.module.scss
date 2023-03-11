@@ -5,45 +5,106 @@
     list-style-type: none;
     cursor: pointer;
     margin-bottom: 31px;
-    &__title {
+    h2 {
         color: white;
         background: $primary;
-        border-radius: 5px;
-        font-size: 24px;
         font-weight: 500;
-        padding: 5px 18px;
+        padding-left: 18px;
     }
     &__description {
+        position: relative;
+        top: -10px;
+        z-index: -1;
         background: #F7F7F7;
-        padding: 30px 18px 19px 27px;
-        font-size: 24px;
+        border-radius: 10px;
+        padding: 30px 18px 19px 18px;
+        font-size: 18px;
         font-weight: 400;
         color: $primary;
     }
-    &__arrow {
+    img {
         position: absolute;
-        width: 14.06px;
-        right:3%;
-        top: 16px;
+        right: 16.08px;
     }
 }
+
+.housing {
+    font-size: 18px;
+    h2 {
+        font-size: 18px;
+        border-radius: 10px;
+        line-height: 52px;
+        height: 52px;
+    }
+    img {
+        top: 22px;
+        width: 15.56px;
+    }
+}
+
+
+.about {
+    font-size: 24px;
+    h2 {
+        font-size: 24px;
+        border-radius: 5px;
+        line-height: 47px;
+        height: 47px;
+    }
+    img {
+        top: 20px;
+        width: 14.06px;
+    }
+}
+
 
 /* Format mobile */
 
 @media all and (max-width: 768px) {
     .dropdown {
         margin-bottom: 19px;
-        &__title {
+        h2 {
             font-size: 13px;
+            height: 29.93px;
+            line-height: 29.93px;
+            border-radius: 5px;
+            padding-left: 11.51px;
         }
         &__description {
-            padding: 11px 23px;
+            padding: 25px 11.51px 11px 11.51px;
             font-size: 12px;
+            border-radius: 5px;
         }
-        &__arrow {
-            position: absolute;
+        img {
             width: 8.98px;
+            top: 12px;
+        }
+    }
+    .housing {
+        font-size: 12px;
+        h2 {
+            font-size: 13px;
+            border-radius: 5px;
+            line-height: 30px;
+            height: 30px;
+        }
+        img {
             top: 11px;
+            width: 8.98px;
+        }
+    }
+    .about {
+        font-size: 12px;
+        h2 {
+            font-size: 13px;
+            line-height: 30px;
+            height: 30px;
+            border-radius: 5px;
+            padding-left: 12px;
+        }
+        img {
+            width: 8.98px;
+            top: 13px;
         }
     }
   }
