@@ -22,6 +22,7 @@
     }
     &__tags {
         display: flex;
+        flex-wrap: wrap;
         list-style-type: none;
         padding: 0;
         &__tag {
@@ -110,7 +111,7 @@
                 height: 18px;
                 min-width: 84px;
                 line-height: 18px;
-                margin-bottom: 0;
+                margin-bottom: 10px;
             }
         }
   }
