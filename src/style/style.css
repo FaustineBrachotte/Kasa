@@ -21,6 +21,7 @@
 @media all and (max-width: 768px) {
   .page {
     margin: 17px 20px 25px 20px;
+    min-height: 523px;
   }
   .page__list {
     margin: 19px 0 0 0;
@@ -102,6 +103,7 @@
 .heading h1 {
   font-size: 36px;
   line-height: 51.34px;
+  font-weight: 500;
 }
 .heading p {
   font-size: 18px;
@@ -297,9 +299,6 @@
 
 /* Format mobile */
 @media all and (max-width: 768px) {
-  .banner {
-    height: 111px;
-  }
   .banner img {
     border-radius: 10px;
   }
@@ -313,6 +312,9 @@
   }
   .banner__background {
     border-radius: 10px;
+  }
+  .banner__small {
+    height: 111px;
   }
 }
 .card {
@@ -337,6 +339,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 142.6%;
+  width: 50%;
   display: flex;
   align-items: flex-end;
   color: #FFFFFF;
@@ -407,26 +410,54 @@
   cursor: pointer;
   margin-bottom: 31px;
 }
-.dropdown__title {
+.dropdown h2 {
   color: white;
   background: #FF6060;
-  border-radius: 5px;
-  font-size: 24px;
   font-weight: 500;
-  padding: 5px 18px;
+  padding-left: 18px;
 }
 .dropdown__description {
+  position: relative;
+  top: -10px;
+  z-index: -1;
   background: #F7F7F7;
-  padding: 30px 18px 19px 27px;
-  font-size: 24px;
+  border-radius: 10px;
+  padding: 30px 18px 19px 18px;
+  font-size: 18px;
   font-weight: 400;
   color: #FF6060;
 }
-.dropdown__arrow {
+.dropdown img {
   position: absolute;
+  right: 16.08px;
+}
+
+.housing {
+  font-size: 18px;
+}
+.housing h2 {
+  font-size: 18px;
+  border-radius: 10px;
+  line-height: 52px;
+  height: 52px;
+}
+.housing img {
+  top: 22px;
+  width: 15.56px;
+}
+
+.about {
+  font-size: 24px;
+}
+.about h2 {
+  font-size: 24px;
+  border-radius: 5px;
+  line-height: 47px;
+  height: 47px;
+}
+.about img {
+  top: 20px;
   width: 14.06px;
-  right: 3%;
-  top: 16px;
 }
 
 /* Format mobile */
@@ -434,17 +465,48 @@
   .dropdown {
     margin-bottom: 19px;
   }
-  .dropdown__title {
+  .dropdown h2 {
     font-size: 13px;
+    height: 29.93px;
+    line-height: 29.93px;
+    border-radius: 5px;
+    padding-left: 11.51px;
   }
   .dropdown__description {
-    padding: 11px 23px;
+    padding: 25px 11.51px 11px 11.51px;
+    font-size: 12px;
+    border-radius: 5px;
+  }
+  .dropdown img {
+    width: 8.98px;
+    top: 12px;
+  }
+  .housing {
     font-size: 12px;
   }
-  .dropdown__arrow {
-    position: absolute;
-    width: 8.98px;
+  .housing h2 {
+    font-size: 13px;
+    border-radius: 5px;
+    line-height: 30px;
+    height: 30px;
+  }
+  .housing img {
     top: 11px;
+    width: 8.98px;
+  }
+  .about {
+    font-size: 12px;
+  }
+  .about h2 {
+    font-size: 13px;
+    line-height: 30px;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 12px;
+  }
+  .about img {
+    width: 8.98px;
+    top: 13px;
   }
 }
 

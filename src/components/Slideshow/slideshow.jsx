@@ -6,6 +6,7 @@ import style from './slideshow.module.scss'
 function Slideshow({ pictures }) {
   const [pictureNumber, updatePicture] = useState(0)
   const numberOfPic = pictures.length
+  const displayedPicNumber = pictureNumber + 1
 
   // Calcul de l'index de l'image précédente
   function prevPicture() {
@@ -35,6 +36,9 @@ function Slideshow({ pictures }) {
           src={pictures[pictureNumber]}
           alt="Logement"
         />
+        <p>
+          {displayedPicNumber} / {numberOfPic}
+        </p>
         <img
           src={ArrowRight}
           className={`${style.slideshow__arrow} ${style.slideshow__arrow__right}`}
@@ -52,6 +56,9 @@ function Slideshow({ pictures }) {
           src={pictures[pictureNumber]}
           alt="Logement"
         />
+        <p>
+          {displayedPicNumber} / {numberOfPic}
+        </p>
       </div>
     </>
   )
